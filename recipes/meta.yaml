@@ -4,7 +4,7 @@ package:
 
 source:
   url: https://sourceforge.net/projects/opencore-amr/files/opencore-amr/opencore-amr-{{ version }}.tar.gz
-  sha256: 2c006cb9d5f651bfb5e60156dbff6af3c9d35c7bbcc9015308c0aff1e14cd341 # curl -L {{ url }} | sha256sum
+  sha256: 2c006cb9d5f651bfb5e60156dbff6af3c9d35c7bbcc9015308c0aff1e14cd341
 
 build:
   number: 0
