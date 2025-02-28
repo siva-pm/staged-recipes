@@ -1,0 +1,31 @@
+package:
+  name: libopencore-amrnb
+  version: 0.1.5
+
+source:
+  url: https://sourceforge.net/projects/opencore-amr/files/opencore-amr/opencore-amr-{{ version }}.tar.gz
+  sha256: 2c006cb9d5f651bfb5e60156dbff6af3c9d35c7bbcc9015308c0aff1e14cd341 # curl -L {{ url }} | sha256sum
+
+build:
+  number: 0
+  script: |
+    ./configure --prefix=${PREFIX}
+    make
+    make install
+
+requirements:
+  build:
+    - autoconf
+    - automake
+    - libtool
+    - make
+    - pkg-config
+  host:
+    - gcc
+  run:
+    - libgcc-ng
+
+about:
+  home: https://sourceforge.net/projects/opencore-amr/
+  license: Apache-2.0
+  summary: AMR-NB library from OpenCORE
